@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\CellPhoneB_Store.props" />
+</Project>
