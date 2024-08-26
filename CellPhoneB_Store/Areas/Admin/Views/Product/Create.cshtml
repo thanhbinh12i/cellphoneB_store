@@ -1,0 +1,57 @@
+﻿@model ProductModel
+@{
+    ViewData["title"] = "Create Product";
+}
+<h4>Create Product</h4>
+<form asp-action="Create" enctype="multipart/form-data">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label for="Name" class="form-label">Name</label>
+        <input asp-for="Name" class="form-control" id="Name" >
+        <span asp-validation-for="Name" class="text-danger"/>
+    </div>
+    <div class="form-group">
+        <label for="Price" class="form-label">Price</label>
+        <input asp-for="Price" class="form-control" id="Price" >
+        <span asp-validation-for="Price" class="text-danger" />
+    </div>
+    <div class="form-group">
+        <label for="Description" class="form-label">Description</label>
+        <textarea asp-for="Description" class="form-control" ></textarea>
+        <span asp-validation-for="Description" class="text-danger" />
+    </div>
+    <div class="form-group">
+        <label for="Category" class="form-label">Category</label>
+        <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.Categories">
+            <option>--Choose a category</option>
+        </select>
+        <span asp-validation-for="CategoryId" class="text-danger" />
+    </div>
+    <div class="form-group">
+        <label for="Brand" class="form-label">Brand</label>
+        <select asp-for="BrandId" class="form-control" asp-items="ViewBag.Brand">
+            <option>--Choose a Brand</option>
+        </select>
+        <span asp-validation-for="BrandId" class="text-danger" />
+    </div>
+    <div class="form-group">
+        <label for="Image" class="form-label">Image</label>
+        <input asp-for="ImageUpload" class="form-control"/>
+        <span asp-validation-for="ImageUpload" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary">Create</button>
+    </div>
+</form>
+<a asp-action="Index">Back to List Product</a>
+@section Scripts{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
+
+    <script>
+        CKEDITOR.replace( "Description" );
+    </script>
+}
+

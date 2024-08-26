@@ -555,3 +555,4 @@ D:\NET\CellPhoneB_Store\CellPhoneB_Store\bin\Debug\net8.0\runtimes\win\lib\net7.
 D:\NET\CellPhoneB_Store\CellPhoneB_Store\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 D:\NET\CellPhoneB_Store\CellPhoneB_Store\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 D:\NET\CellPhoneB_Store\CellPhoneB_Store\obj\Debug\net8.0\scopedcss\Areas\Admin\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\NET\CellPhoneB_Store\CellPhoneB_Store\obj\Debug\net8.0\CellPhoneB_Store.sourcelink.json
