@@ -7,7 +7,7 @@ namespace CellPhoneB_Store.Models
 	public class ProductModel
 	{
 		[Key]
-		public int Id { get; set; }
+		public long Id { get; set; }
 		[Required, MinLength(4, ErrorMessage =" Yêu cầu nhập tên Sản phẩm")]
 		public string Name { get; set; }
 		public string Slug { get; set; }
@@ -26,7 +26,7 @@ namespace CellPhoneB_Store.Models
 		public string Image { get; set; }
 		[NotMapped]
 		[FileExtension]
-		public IFormFile ImageUpload { get; set; }
+		public IFormFile? ImageUpload { get; set; }
 
 			}
 }

@@ -116,26 +116,11 @@
 						</div>
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a asp-action="Index" asp-controller="Home" class="active">Home</a></li>
-								<li class="dropdown">
-									<a asp-controller="Product">Shop<i class="fa fa-angle-down"></i></a>
-									<ul role="menu" class="sub-menu">
-										<li><a asp-action="Index" asp-controller="Category">Categories</a></li>
-										<li><a asp-controller="Product" asp-action="Details">Product Details</a></li>
-										<li><a >Checkout</a></li>
-										<li><a asp-controller="Cart">Cart</a></li>
-										<li><a >Login</a></li>
-									</ul>
-								</li>
-								<li class="dropdown">
-									<a href="#">Blog<i class="fa fa-angle-down"></i></a>
-									<ul role="menu" class="sub-menu">
-										<li><a href="blog.html">Blog List</a></li>
-										<li><a href="blog-single.html">Blog Single</a></li>
-									</ul>
-								</li>
-								<li><a href="404.html">404</a></li>
-								<li><a href="contact-us.html">Contact</a></li>
+								<li><a asp-controller="Home" class="active">Home</a></li>
+								<li><a asp-action="Index" asp-controller="Product">Manage Products</a></li>
+								<li><a asp-action="Index" asp-controller="Category">Manage Category</a></li>
+								<li><a asp-action="Index" asp-controller="Brand">Manage Brand</a></li>
+								<li><a asp-action="Index" asp-controller="Order">Manage Order</a></li>
 							</ul>
 						</div>
 					</div>
@@ -326,6 +311,7 @@
 	<script src="~/js/price-range.js"></script>
 	<script src="~/js/jquery.prettyPhoto.js"></script>
 	<script src="~/js/main.js"></script>
+	<script src="~/Backend/js/site.js"></script>
 	@await RenderSectionAsync("Scripts",required:false)
 </body>
 </html>

@@ -1,0 +1,35 @@
+﻿@model IEnumerable<BrandModel>
+@{
+    ViewData["title"] = "Brand Listed";
+}
+<h3>List Brands</h3>
+<a asp-action="Create" asp-controller="Brand">Add New Brand</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Brand Name</th>
+            <th scope="col">Brand Description</th>
+            <th scope="col">Brand Slug</th>
+            <th scope="col">Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td scope="row">@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Description</td>
+                <td>@item.Slug</td>
+                <td>@item.Status</td>
+                <td>
+                    <a class="btn btn-warning" asp-action="Edit" asp-controller="Brand" asp-route-id="@item.Id">Edit</a>
+                    <a class="btn btn-danger confirmDeletion" asp-action="Delete" asp-controller="Brand" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+
+
+    </tbody>
+</table>

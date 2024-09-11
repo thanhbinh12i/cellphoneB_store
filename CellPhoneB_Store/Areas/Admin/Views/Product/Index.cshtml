@@ -32,7 +32,7 @@
                 <td>@item.Brand.Name</td>
                 <td>
                     <a class="btn btn-warning" asp-action="Edit" asp-controller="Product" asp-route-id="@item.Id">Edit</a>
-                    <a class="btn btn-danger" asp-action="Delete" asp-controller="Product" asp-route-id="@item.Id">Delete</a>
+                    <a class="btn btn-danger confirmDeletion" asp-action="Delete" asp-controller="Product" asp-route-id="@item.Id">Delete</a>
                 </td>
             </tr>
         }

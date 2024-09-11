@@ -25,7 +25,7 @@
 									<p>@item.Name</p>
 									<p>Danh mục : @item.Category.Name</p>
 									<p>Thương hiệu : @item.Brand.Name</p>
-									<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+									<a class="btn btn-default add-to-cart" asp-action="Add" asp-controller="Cart" asp-route-Id="@item.Id"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 								</div>
 							</div>
 						</a>

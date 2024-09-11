@@ -1,4 +1,6 @@
+using CellPhoneB_Store.Models;
 using CellPhoneB_Store.Respository;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace CellPhoneB_Store
@@ -10,21 +12,39 @@ namespace CellPhoneB_Store
             var builder = WebApplication.CreateBuilder(args);
             var builderRazor = builder.Services.AddRazorPages();
 
-            // Add services to the container.
-            builder.Services.AddControllersWithViews();
-
-            builder.Services.AddDistributedMemoryCache();
-
-            builder.Services.AddSession(options =>
-            {
-                options.IdleTimeout = TimeSpan.FromMinutes(30);
-                options.Cookie.IsEssential = true;
-            });
             builder.Services.AddDbContext<DataContext>(options =>
             {
                 options.UseSqlServer(builder.Configuration["ConnectionStrings:ConnectedDb"]);
             });
-            var app = builder.Build();
+
+			// Add services to the container.
+			builder.Services.AddControllersWithViews();
+
+			builder.Services.AddDistributedMemoryCache();
+
+			builder.Services.AddSession(options =>
+			{
+				options.IdleTimeout = TimeSpan.FromMinutes(30);
+				options.Cookie.IsEssential = true;
+			});
+
+			builder.Services.AddIdentity<AppUserModel,IdentityRole>().AddEntityFrameworkStores<DataContext>().AddDefaultTokenProviders();
+
+			builder.Services.Configure<IdentityOptions>(options =>
+			{
+				// Password settings.
+				options.Password.RequireDigit = true;
+				options.Password.RequireLowercase = true;
+				options.Password.RequireNonAlphanumeric = false;
+				options.Password.RequireUppercase = false;
+				options.Password.RequiredLength = 4;
+
+				options.User.RequireUniqueEmail = true;
+			});
+
+			var app = builder.Build();
+
+            app.UseStatusCodePagesWithRedirects("/Home/Error?statuscode={0}");
             app.UseSession();
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
@@ -40,11 +60,21 @@ namespace CellPhoneB_Store
 
             app.UseRouting();
 
-            app.UseAuthorization();
+			app.UseAuthentication();
+			app.UseAuthorization();
 
-            app.MapControllerRoute(
+
+			app.MapControllerRoute(
               name: "Areas",
               pattern: "{area:exists}/{controller=Product}/{action=Index}/{id?}");
+            app.MapControllerRoute(
+              name: "category",
+              pattern: "/category/{Slug?}",
+              defaults: new { controller = "Category", action = "Index" });
+            app.MapControllerRoute(
+              name: "brand",
+              pattern: "/brand/{Slug?}",
+              defaults: new { controller = "Brand", action = "Index" });
 
             app.MapControllerRoute(
                 name: "default",
