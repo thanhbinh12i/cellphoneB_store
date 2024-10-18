@@ -1,4 +1,4 @@
-name: NDepend Analysis
+name: NDepend Analysis (Trial)
 
 on:
   push:
@@ -23,17 +23,16 @@ jobs:
     - name: Build
       run: dotnet build CellPhoneB_Store.sln --configuration Release --no-restore
 
-    - name: Download NDepend
+    - name: Download and Install NDepend
       run: |
-        Invoke-WebRequest -Uri "https://www.ndepend.com/download/NDepend_2021.2.1.9514.zip" -OutFile "ndepend.zip"
+        Invoke-WebRequest -Uri "https://www.ndepend.com/download/NDepend_2024.1.0.xxxx_Trial.zip" -OutFile "ndepend.zip"
         Expand-Archive -Path "ndepend.zip" -DestinationPath "ndepend"
+        # Chạy installer nếu cần
+        # Start-Process -FilePath "ndepend\NDependInstaller.exe" -ArgumentList "/VERYSILENT" -Wait
 
     - name: Run NDepend Analysis
-      env:
-        NDEPEND_LICENSE_KEY: ${{ secrets.NDEPEND_LICENSE }}
       run: |
-        [System.Environment]::SetEnvironmentVariable('NDEPEND_LICENSE_KEY', $env:NDEPEND_LICENSE_KEY, [System.EnvironmentVariableTarget]::User)
-        .\ndepend\NDepend.Console.exe "CellPhoneB_Store\CellPhoneB_Store.ndproj" /OutDir "NDependOut"
+        .\ndepend\NDepend.Console.exe "CellPhoneB_Store\CellPhoneB_Store.csproj" /OutDir "NDependOut"
 
     - name: Upload NDepend Results
       uses: actions/upload-artifact@v2
