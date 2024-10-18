@@ -2,40 +2,47 @@ name: NDepend Analysis (Trial)
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master ]  # Trigger on push to master
   pull_request:
-    branches: [ master ]
+    branches: [ master ]  # Trigger on PR to master
 
 jobs:
   analyze:
     runs-on: windows-latest
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      # Step 1: Checkout repository
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: '8.0.403'  # Update .NET version if needed
+      # Step 2: Setup .NET environment
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '8.0.403'  # Change version as per your requirement
 
-    - name: Restore dependencies
-      run: dotnet restore CellPhoneB_Store.sln
+      # Step 3: Restore .NET dependencies
+      - name: Restore dependencies
+        run: dotnet restore CellPhoneB_Store.sln
 
-    - name: Build
-      run: dotnet build CellPhoneB_Store.sln --configuration Release --no-restore
+      # Step 4: Build the project in Release mode
+      - name: Build the project
+        run: dotnet build CellPhoneB_Store.sln --configuration Release --no-restore
 
-    - name: Download and Extract NDepend
-      run: |
-        curl -L -o ndepend.zip "https://www.ndepend.com/download/NDepend_2024.2.0.9740_Trial.zip"
-        tar -xf ndepend.zip -C ./ndepend
+      # Step 5: Download and extract NDepend trial version
+      - name: Download and Extract NDepend
+        run: |
+          curl -L -o ndepend.zip "https://www.ndepend.com/download/NDepend_2024.2.0.9740_Trial.zip"
+          tar -xf ndepend.zip -C ./ndepend
 
-    - name: Run NDepend Analysis
-      run: |
-        .\ndepend\NDepend.Console.exe "CellPhoneB_Store\CellPhoneB_Store.csproj" /OutDir "NDependOut"
-      shell: pwsh
+      # Step 6: Run NDepend analysis
+      - name: Run NDepend Analysis
+        run: |
+          .\ndepend\NDepend.Console.exe "CellPhoneB_Store\CellPhoneB_Store.csproj" /OutDir "NDependOut"
+        shell: pwsh
 
-    - name: Upload NDepend Results
-      uses: actions/upload-artifact@v2
-      with:
-        name: ndepend-results
-        path: NDependOut
+      # Step 7: Upload NDepend results as an artifact for review
+      - name: Upload NDepend Results
+        uses: actions/upload-artifact@v2
+        with:
+          name: ndepend-results
+          path: NDependOut
