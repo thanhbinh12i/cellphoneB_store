@@ -25,7 +25,7 @@ jobs:
 
     - name: Download and Install NDepend
       run: |
-        Invoke-WebRequest -Uri "https://www.ndepend.com/download/NDepend_2024.1.0.xxxx_Trial.zip" -OutFile "ndepend.zip"
+        Invoke-WebRequest -Uri "https://www.ndepend.com/download/NDepend_2024.2.0.9740_Trial.zip" -OutFile "ndepend.zip"
         Expand-Archive -Path "ndepend.zip" -DestinationPath "ndepend"
         # Chạy installer nếu cần
         # Start-Process -FilePath "ndepend\NDependInstaller.exe" -ArgumentList "/VERYSILENT" -Wait
