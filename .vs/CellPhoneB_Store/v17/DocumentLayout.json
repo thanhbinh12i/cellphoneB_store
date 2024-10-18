@@ -70,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 102,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -79,6 +79,18 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{99a11807-c5db-4877-ad35-09b56a044007}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
             },
             {
               "$type": "Document",
@@ -103,8 +115,7 @@
               "RelativeToolTip": "CellPhoneB_Store\\Models\\CategoryModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T15:46:12.776Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-18T15:46:12.776Z"
             },
             {
               "$type": "Document",
@@ -116,8 +127,7 @@
               "RelativeToolTip": "CellPhoneB_Store\\Controllers\\HomeController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T15:46:04.94Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-18T15:46:04.94Z"
             },
             {
               "$type": "Document",
@@ -129,8 +139,7 @@
               "RelativeToolTip": "CellPhoneB_Store\\Controllers\\CartController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T15:46:03.991Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-18T15:46:03.991Z"
             },
             {
               "$type": "Document",
@@ -142,8 +151,7 @@
               "RelativeToolTip": "CellPhoneB_Store\\Controllers\\BrandController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T15:46:03.318Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-18T15:46:03.318Z"
             },
             {
               "$type": "Document",
@@ -155,8 +163,7 @@
               "RelativeToolTip": "CellPhoneB_Store\\Controllers\\CategoryController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T15:46:00.253Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-18T15:46:00.253Z"
             },
             {
               "$type": "Document",
@@ -168,8 +175,7 @@
               "RelativeToolTip": "CellPhoneB_Store\\Models\\OrderModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T15:45:46.925Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-18T15:45:46.925Z"
             },
             {
               "$type": "Document",
@@ -181,8 +187,7 @@
               "RelativeToolTip": "CellPhoneB_Store\\Areas\\Admin\\Controllers\\RoleController.cs",
               "ViewState": "AQIAAEMAAAAAAAAAAAD4v3IAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T13:34:06.597Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-25T13:34:06.597Z"
             },
             {
               "$type": "Document",
@@ -206,8 +211,7 @@
               "RelativeToolTip": "CellPhoneB_Store\\Areas\\Admin\\Controllers\\ProductController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T15:24:16.612Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-25T15:24:16.612Z"
             },
             {
               "$type": "Document",
@@ -268,18 +272,6 @@
               "ViewState": "AQIAADkAAAAAAAAAAAAkwDkAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-15T09:18:12.067Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
             },
             {
               "$type": "Bookmark",
