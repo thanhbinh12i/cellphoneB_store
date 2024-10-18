@@ -1,0 +1,42 @@
+name: NDepend Analysis
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  analyze:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '6.0.x'  # Cập nhật phiên bản .NET nếu cần
+
+    - name: Restore dependencies
+      run: dotnet restore CellPhoneB_Store.sln
+
+    - name: Build
+      run: dotnet build CellPhoneB_Store.sln --configuration Release --no-restore
+
+    - name: Download NDepend
+      run: |
+        Invoke-WebRequest -Uri "https://www.ndepend.com/download/NDepend_2021.2.1.9514.zip" -OutFile "ndepend.zip"
+        Expand-Archive -Path "ndepend.zip" -DestinationPath "ndepend"
+
+    - name: Run NDepend Analysis
+      env:
+        NDEPEND_LICENSE_KEY: ${{ secrets.NDEPEND_LICENSE }}
+      run: |
+        [System.Environment]::SetEnvironmentVariable('NDEPEND_LICENSE_KEY', $env:NDEPEND_LICENSE_KEY, [System.EnvironmentVariableTarget]::User)
+        .\ndepend\NDepend.Console.exe "CellPhoneB_Store\CellPhoneB_Store.ndproj" /OutDir "NDependOut"
+
+    - name: Upload NDepend Results
+      uses: actions/upload-artifact@v2
+      with:
+        name: ndepend-results
+        path: NDependOut
