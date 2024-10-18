@@ -112,7 +112,7 @@ namespace CellPhoneB_Store.Areas.Admin.Controllers
             
             _dataContext.Categories.Remove(category);
             await _dataContext.SaveChangesAsync();
-            TempData["error"] = "Xóa danh mục thành công";
+            TempData["success"] = "Xóa danh mục thành công";
             return RedirectToAction("Index");
         }
     }
