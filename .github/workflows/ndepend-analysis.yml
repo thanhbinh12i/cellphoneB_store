@@ -1,0 +1,43 @@
+name: NDepend Analysis
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  ndepend-analysis:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '8.0.403'  # Điều chỉnh version này nếu cần
+    
+    - name: Restore dependencies
+      run: dotnet restore
+    
+    - name: Build
+      run: dotnet build --no-restore
+    
+    - name: Setup NDepend
+      run: |
+        $ndependPath = "C:\Users\PC\Downloads\NDepend_2024.2.0.9740"
+        if (-not (Test-Path $ndependPath)) {
+          New-Item -ItemType Directory -Force -Path $ndependPath
+          Invoke-WebRequest -Uri "https://www.ndepend.com/download/NDepend_2024_2_2.zip" -OutFile "NDepend.zip"
+          Expand-Archive -Path "NDepend.zip" -DestinationPath $ndependPath
+        }
+    
+    - name: Run NDepend Analysis
+      run: |
+        & "C:\Users\PC\Downloads\NDepend_2024.2.0.9740\NDepend.Console.exe" "CellPhoneB_Store.ndproj"
+    
+    - name: Upload NDepend results
+      uses: actions/upload-artifact@v2
+      with:
+        name: ndepend-results
+        path: NDependOut
