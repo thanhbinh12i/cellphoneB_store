@@ -10,12 +10,13 @@ jobs:
   analyze:
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '6.0.x'  # Cập nhật phiên bản .NET nếu cần
+        dotnet-version: '8.0.403'  # Update .NET version if needed
 
     - name: Restore dependencies
       run: dotnet restore CellPhoneB_Store.sln
@@ -23,16 +24,15 @@ jobs:
     - name: Build
       run: dotnet build CellPhoneB_Store.sln --configuration Release --no-restore
 
-    - name: Download and Install NDepend
+    - name: Download and Extract NDepend
       run: |
-        Invoke-WebRequest -Uri "https://www.ndepend.com/download/NDepend_2024.2.0.9740_Trial.zip" -OutFile "ndepend.zip"
-        Expand-Archive -Path "ndepend.zip" -DestinationPath "ndepend"
-        # Chạy installer nếu cần
-        # Start-Process -FilePath "ndepend\NDependInstaller.exe" -ArgumentList "/VERYSILENT" -Wait
+        curl -L -o ndepend.zip "https://www.ndepend.com/download/NDepend_2024.2.0.9740_Trial.zip"
+        tar -xf ndepend.zip -C ./ndepend
 
     - name: Run NDepend Analysis
       run: |
         .\ndepend\NDepend.Console.exe "CellPhoneB_Store\CellPhoneB_Store.csproj" /OutDir "NDependOut"
+      shell: pwsh
 
     - name: Upload NDepend Results
       uses: actions/upload-artifact@v2
