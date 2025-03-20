@@ -23,7 +23,7 @@ namespace CellPhoneB_Store.Controllers
 			};
 			return View(cartVM);
 		}
-		public async Task<IActionResult> Add(int id)
+		public async Task<IActionResult> Add(long id)
 		{
 			ProductModel product = await _dataContext.Products.FindAsync(id);
 			List<CartItemModel> cart = HttpContext.Session.GetJson<List<CartItemModel>>("Cart")
@@ -43,7 +43,7 @@ namespace CellPhoneB_Store.Controllers
 			return Redirect(Request.Headers["Referer"].ToString());
 		}
 
-		public async Task<IActionResult> Decrease(int id)
+		public async Task<IActionResult> Decrease(long id)
 		{
 			List<CartItemModel> cart = HttpContext.Session.GetJson<List<CartItemModel>>("Cart");
 			CartItemModel cartItem = cart.Where(c => c.ProductId == id).FirstOrDefault();
@@ -67,7 +67,7 @@ namespace CellPhoneB_Store.Controllers
             TempData["success"] = "Decrease Item Quantity Successfully";
             return RedirectToAction("Index");
 		}
-		public async Task<IActionResult> Increase(int id)
+		public async Task<IActionResult> Increase(long id)
 		{
 			List<CartItemModel> cart = HttpContext.Session.GetJson<List<CartItemModel>>("Cart");
 			CartItemModel cartItem = cart.Where(c => c.ProductId == id).FirstOrDefault();
@@ -91,7 +91,7 @@ namespace CellPhoneB_Store.Controllers
             TempData["success"] = "Increase Item Quantity Successfully";
             return RedirectToAction("Index");
 		}
-		public async Task<IActionResult> Remove(int id)
+		public async Task<IActionResult> Remove(long id)
 		{
 			List<CartItemModel> cart = HttpContext.Session.GetJson<List<CartItemModel>>("Cart");
 			cart.RemoveAll(p => p.ProductId == id);
