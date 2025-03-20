@@ -3,76 +3,76 @@
   "WorkspaceRootPath": "D:\\NET\\CellPhoneB_Store\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|d:\\net\\cellphoneb_store\\cellphoneb_store\\respository\\sessionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|solutionrelative:cellphoneb_store\\respository\\sessionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|d:\\net\\cellphoneb_store\\cellphoneb_store\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|solutionrelative:cellphoneb_store\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|d:\\net\\cellphoneb_store\\cellphoneb_store\\respository\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|solutionrelative:cellphoneb_store\\respository\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|d:\\net\\cellphoneb_store\\cellphoneb_store\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|solutionrelative:cellphoneb_store\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|d:\\net\\cellphoneb_store\\cellphoneb_store\\respository\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|solutionrelative:cellphoneb_store\\respository\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|d:\\net\\cellphoneb_store\\cellphoneb_store\\views\\product\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|solutionrelative:cellphoneb_store\\views\\product\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|d:\\net\\cellphoneb_store\\cellphoneb_store\\models\\classtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|solutionrelative:cellphoneb_store\\models\\classtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|d:\\net\\cellphoneb_store\\cellphoneb_store\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|solutionrelative:cellphoneb_store\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|d:\\net\\cellphoneb_store\\cellphoneb_store\\models\\categorymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|solutionrelative:cellphoneb_store\\models\\categorymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|d:\\net\\cellphoneb_store\\cellphoneb_store\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|solutionrelative:cellphoneb_store\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|d:\\net\\cellphoneb_store\\cellphoneb_store\\areas\\admin\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|solutionrelative:cellphoneb_store\\areas\\admin\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|d:\\net\\cellphoneb_store\\cellphoneb_store\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|solutionrelative:cellphoneb_store\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|d:\\net\\cellphoneb_store\\cellphoneb_store\\areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|solutionrelative:cellphoneb_store\\areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|d:\\net\\cellphoneb_store\\cellphoneb_store\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|solutionrelative:cellphoneb_store\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|d:\\net\\cellphoneb_store\\cellphoneb_store\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|solutionrelative:cellphoneb_store\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|d:\\net\\cellphoneb_store\\cellphoneb_store\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|solutionrelative:cellphoneb_store\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|d:\\net\\cellphoneb_store\\cellphoneb_store\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|solutionrelative:cellphoneb_store\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|d:\\net\\cellphoneb_store\\cellphoneb_store\\models\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|solutionrelative:cellphoneb_store\\models\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|d:\\net\\cellphoneb_store\\cellphoneb_store\\controllers\\brandcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|solutionrelative:cellphoneb_store\\controllers\\brandcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|d:\\net\\cellphoneb_store\\cellphoneb_store\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|solutionrelative:cellphoneb_store\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|d:\\net\\cellphoneb_store\\cellphoneb_store\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|solutionrelative:cellphoneb_store\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|d:\\net\\cellphoneb_store\\cellphoneb_store\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|solutionrelative:cellphoneb_store\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|d:\\net\\cellphoneb_store\\cellphoneb_store\\models\\ordermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|solutionrelative:cellphoneb_store\\models\\ordermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|d:\\net\\cellphoneb_store\\cellphoneb_store\\respository\\components\\brandsviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|solutionrelative:cellphoneb_store\\respository\\components\\brandsviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|d:\\net\\cellphoneb_store\\cellphoneb_store\\areas\\admin\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|solutionrelative:cellphoneb_store\\areas\\admin\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|d:\\net\\cellphoneb_store\\cellphoneb_store\\models\\brandmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|solutionrelative:cellphoneb_store\\models\\brandmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|d:\\net\\cellphoneb_store\\cellphoneb_store\\areas\\admin\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|solutionrelative:cellphoneb_store\\areas\\admin\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|d:\\net\\cellphoneb_store\\cellphoneb_store\\models\\cartitemmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|solutionrelative:cellphoneb_store\\models\\cartitemmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|d:\\net\\cellphoneb_store\\cellphoneb_store\\areas\\admin\\views\\role\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|solutionrelative:cellphoneb_store\\areas\\admin\\views\\role\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|d:\\net\\cellphoneb_store\\cellphoneb_store\\models\\appusermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|solutionrelative:cellphoneb_store\\models\\appusermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|d:\\net\\cellphoneb_store\\cellphoneb_store\\areas\\admin\\views\\role\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|solutionrelative:cellphoneb_store\\areas\\admin\\views\\role\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|d:\\net\\cellphoneb_store\\cellphoneb_store\\migrations\\datacontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|solutionrelative:cellphoneb_store\\migrations\\datacontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|d:\\net\\cellphoneb_store\\cellphoneb_store\\areas\\admin\\views\\role\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|solutionrelative:cellphoneb_store\\areas\\admin\\views\\role\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|d:\\net\\cellphoneb_store\\cellphoneb_store\\areas\\admin\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|solutionrelative:cellphoneb_store\\areas\\admin\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|d:\\net\\cellphoneb_store\\cellphoneb_store\\cellphoneb_store.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{60D87D41-B0CA-4BB5-9092-4F52650946DC}|CellPhoneB_Store\\CellPhoneB_Store.csproj|solutionrelative:cellphoneb_store\\cellphoneb_store.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -82,7 +82,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 102,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -114,220 +114,231 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SessionExtensions.cs",
-              "DocumentMoniker": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Respository\\SessionExtensions.cs",
-              "RelativeDocumentMoniker": "CellPhoneB_Store\\Respository\\SessionExtensions.cs",
-              "ToolTip": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Respository\\SessionExtensions.cs",
-              "RelativeToolTip": "CellPhoneB_Store\\Respository\\SessionExtensions.cs",
+              "DocumentIndex": 3,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "CellPhoneB_Store\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Properties\\launchSettings.json",
+              "RelativeToolTip": "CellPhoneB_Store\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T06:26:25.473Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-20T03:52:39.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "CellPhoneB_Store\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "CellPhoneB_Store\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-20T03:52:34.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_Layout.cshtml.css",
+              "DocumentMoniker": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeDocumentMoniker": "CellPhoneB_Store\\Views\\Shared\\_Layout.cshtml.css",
+              "ToolTip": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeToolTip": "CellPhoneB_Store\\Views\\Shared\\_Layout.cshtml.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-20T03:52:33.494Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "CellPhoneB_Store\\appsettings.Development.json",
+              "ToolTip": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\appsettings.Development.json",
+              "RelativeToolTip": "CellPhoneB_Store\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-20T03:52:30.986Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DataContext.cs",
-              "DocumentMoniker": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Respository\\DataContext.cs",
-              "RelativeDocumentMoniker": "CellPhoneB_Store\\Respository\\DataContext.cs",
-              "ToolTip": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Respository\\DataContext.cs",
-              "RelativeToolTip": "CellPhoneB_Store\\Respository\\DataContext.cs",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\appsettings.json",
+              "RelativeDocumentMoniker": "CellPhoneB_Store\\appsettings.json",
+              "ToolTip": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\appsettings.json",
+              "RelativeToolTip": "CellPhoneB_Store\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-20T03:52:30.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Views\\Product\\Index.cshtml",
+              "RelativeDocumentMoniker": "CellPhoneB_Store\\Views\\Product\\Index.cshtml",
+              "ToolTip": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Views\\Product\\Index.cshtml",
+              "RelativeToolTip": "CellPhoneB_Store\\Views\\Product\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-20T03:52:20.751Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProductModel.cs",
+              "DocumentMoniker": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Models\\ProductModel.cs",
+              "RelativeDocumentMoniker": "CellPhoneB_Store\\Models\\ProductModel.cs",
+              "ToolTip": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Models\\ProductModel.cs",
+              "RelativeToolTip": "CellPhoneB_Store\\Models\\ProductModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T06:26:23.481Z"
+              "WhenOpened": "2025-03-20T03:51:23.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "CellPhoneB_Store\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "CellPhoneB_Store\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-20T03:51:20.387Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "SeedData.cs",
-              "DocumentMoniker": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Respository\\SeedData.cs",
-              "RelativeDocumentMoniker": "CellPhoneB_Store\\Respository\\SeedData.cs",
-              "ToolTip": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Respository\\SeedData.cs",
-              "RelativeToolTip": "CellPhoneB_Store\\Respository\\SeedData.cs",
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Views\\Product\\Details.cshtml",
+              "RelativeDocumentMoniker": "CellPhoneB_Store\\Views\\Product\\Details.cshtml",
+              "ToolTip": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Views\\Product\\Details.cshtml",
+              "RelativeToolTip": "CellPhoneB_Store\\Views\\Product\\Details.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T06:26:12.815Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-20T03:51:14.124Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ClassTest.cs",
-              "DocumentMoniker": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Models\\ClassTest.cs",
-              "RelativeDocumentMoniker": "CellPhoneB_Store\\Models\\ClassTest.cs",
-              "ToolTip": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Models\\ClassTest.cs",
-              "RelativeToolTip": "CellPhoneB_Store\\Models\\ClassTest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Program.cs",
+              "RelativeDocumentMoniker": "CellPhoneB_Store\\Program.cs",
+              "ToolTip": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Program.cs",
+              "RelativeToolTip": "CellPhoneB_Store\\Program.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T15:46:26.599Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CategoryModel.cs",
-              "DocumentMoniker": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Models\\CategoryModel.cs",
-              "RelativeDocumentMoniker": "CellPhoneB_Store\\Models\\CategoryModel.cs",
-              "ToolTip": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Models\\CategoryModel.cs",
-              "RelativeToolTip": "CellPhoneB_Store\\Models\\CategoryModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T15:46:12.776Z"
+              "WhenOpened": "2025-03-20T03:50:52.734Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "CellPhoneB_Store\\Controllers\\ProductController.cs",
+              "ToolTip": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "CellPhoneB_Store\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T03:49:44.853Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "CellPhoneB_Store\\Controllers\\HomeController.cs",
               "ToolTip": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Controllers\\HomeController.cs",
               "RelativeToolTip": "CellPhoneB_Store\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T15:46:04.94Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CartController.cs",
-              "DocumentMoniker": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Controllers\\CartController.cs",
-              "RelativeDocumentMoniker": "CellPhoneB_Store\\Controllers\\CartController.cs",
-              "ToolTip": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Controllers\\CartController.cs",
-              "RelativeToolTip": "CellPhoneB_Store\\Controllers\\CartController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T15:46:03.991Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "BrandController.cs",
-              "DocumentMoniker": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Controllers\\BrandController.cs",
-              "RelativeDocumentMoniker": "CellPhoneB_Store\\Controllers\\BrandController.cs",
-              "ToolTip": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Controllers\\BrandController.cs",
-              "RelativeToolTip": "CellPhoneB_Store\\Controllers\\BrandController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T15:46:03.318Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "CategoryController.cs",
-              "DocumentMoniker": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Controllers\\CategoryController.cs",
-              "RelativeDocumentMoniker": "CellPhoneB_Store\\Controllers\\CategoryController.cs",
-              "ToolTip": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Controllers\\CategoryController.cs",
-              "RelativeToolTip": "CellPhoneB_Store\\Controllers\\CategoryController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T15:46:00.253Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "OrderModel.cs",
-              "DocumentMoniker": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Models\\OrderModel.cs",
-              "RelativeDocumentMoniker": "CellPhoneB_Store\\Models\\OrderModel.cs",
-              "ToolTip": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Models\\OrderModel.cs",
-              "RelativeToolTip": "CellPhoneB_Store\\Models\\OrderModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T15:45:46.925Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RoleController.cs",
-              "DocumentMoniker": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Areas\\Admin\\Controllers\\RoleController.cs",
-              "RelativeDocumentMoniker": "CellPhoneB_Store\\Areas\\Admin\\Controllers\\RoleController.cs",
-              "ToolTip": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Areas\\Admin\\Controllers\\RoleController.cs",
-              "RelativeToolTip": "CellPhoneB_Store\\Areas\\Admin\\Controllers\\RoleController.cs",
-              "ViewState": "AQIAAEMAAAAAAAAAAAD4v3IAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T13:34:06.597Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "OrderController.cs",
-              "DocumentMoniker": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Areas\\Admin\\Controllers\\OrderController.cs",
-              "RelativeDocumentMoniker": "CellPhoneB_Store\\Areas\\Admin\\Controllers\\OrderController.cs",
-              "ToolTip": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Areas\\Admin\\Controllers\\OrderController.cs",
-              "RelativeToolTip": "CellPhoneB_Store\\Areas\\Admin\\Controllers\\OrderController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T15:24:17.76Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Areas\\Admin\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "CellPhoneB_Store\\Areas\\Admin\\Controllers\\ProductController.cs",
-              "ToolTip": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Areas\\Admin\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "CellPhoneB_Store\\Areas\\Admin\\Controllers\\ProductController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T15:24:16.612Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Areas\\Admin\\Views\\Role\\Edit.cshtml",
-              "RelativeDocumentMoniker": "CellPhoneB_Store\\Areas\\Admin\\Views\\Role\\Edit.cshtml",
-              "ToolTip": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Areas\\Admin\\Views\\Role\\Edit.cshtml",
-              "RelativeToolTip": "CellPhoneB_Store\\Areas\\Admin\\Views\\Role\\Edit.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-25T15:17:50.77Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Areas\\Admin\\Views\\Role\\Create.cshtml",
-              "RelativeDocumentMoniker": "CellPhoneB_Store\\Areas\\Admin\\Views\\Role\\Create.cshtml",
-              "ToolTip": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Areas\\Admin\\Views\\Role\\Create.cshtml",
-              "RelativeToolTip": "CellPhoneB_Store\\Areas\\Admin\\Views\\Role\\Create.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-25T15:02:46.917Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "_Layout.cshtml.css",
-              "DocumentMoniker": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml.css",
-              "RelativeDocumentMoniker": "CellPhoneB_Store\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml.css",
-              "ToolTip": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml.css",
-              "RelativeToolTip": "CellPhoneB_Store\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-09-25T15:01:36.967Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Areas\\Admin\\Views\\Role\\Index.cshtml",
-              "RelativeDocumentMoniker": "CellPhoneB_Store\\Areas\\Admin\\Views\\Role\\Index.cshtml",
-              "ToolTip": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Areas\\Admin\\Views\\Role\\Index.cshtml",
-              "RelativeToolTip": "CellPhoneB_Store\\Areas\\Admin\\Views\\Role\\Index.cshtml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-25T14:14:06.858Z"
+              "WhenOpened": "2025-03-20T03:49:42.052Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Areas\\Admin\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "CellPhoneB_Store\\Areas\\Admin\\Controllers\\UserController.cs",
-              "ToolTip": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Areas\\Admin\\Controllers\\UserController.cs",
-              "RelativeToolTip": "CellPhoneB_Store\\Areas\\Admin\\Controllers\\UserController.cs",
-              "ViewState": "AQIAADkAAAAAAAAAAAAkwDkAAAAVAAAA",
+              "Title": "BrandsViewComponent.cs",
+              "DocumentMoniker": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Respository\\Components\\BrandsViewComponent.cs",
+              "RelativeDocumentMoniker": "CellPhoneB_Store\\Respository\\Components\\BrandsViewComponent.cs",
+              "ToolTip": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Respository\\Components\\BrandsViewComponent.cs",
+              "RelativeToolTip": "CellPhoneB_Store\\Respository\\Components\\BrandsViewComponent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-15T09:18:12.067Z"
+              "WhenOpened": "2025-03-18T09:40:34.275Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "BrandModel.cs",
+              "DocumentMoniker": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Models\\BrandModel.cs",
+              "RelativeDocumentMoniker": "CellPhoneB_Store\\Models\\BrandModel.cs",
+              "ToolTip": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Models\\BrandModel.cs",
+              "RelativeToolTip": "CellPhoneB_Store\\Models\\BrandModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T09:40:01.442Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CartItemModel.cs",
+              "DocumentMoniker": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Models\\CartItemModel.cs",
+              "RelativeDocumentMoniker": "CellPhoneB_Store\\Models\\CartItemModel.cs",
+              "ToolTip": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Models\\CartItemModel.cs",
+              "RelativeToolTip": "CellPhoneB_Store\\Models\\CartItemModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T09:40:00.473Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AppUserModel.cs",
+              "DocumentMoniker": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Models\\AppUserModel.cs",
+              "RelativeDocumentMoniker": "CellPhoneB_Store\\Models\\AppUserModel.cs",
+              "ToolTip": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Models\\AppUserModel.cs",
+              "RelativeToolTip": "CellPhoneB_Store\\Models\\AppUserModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T09:39:59.305Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DataContextModelSnapshot.cs",
+              "DocumentMoniker": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Migrations\\DataContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "CellPhoneB_Store\\Migrations\\DataContextModelSnapshot.cs",
+              "ToolTip": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\Migrations\\DataContextModelSnapshot.cs",
+              "RelativeToolTip": "CellPhoneB_Store\\Migrations\\DataContextModelSnapshot.cs",
+              "ViewState": "AgIAABQBAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T09:39:54.041Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CellPhoneB_Store",
+              "DocumentMoniker": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\CellPhoneB_Store.csproj",
+              "RelativeDocumentMoniker": "CellPhoneB_Store\\CellPhoneB_Store.csproj",
+              "ToolTip": "D:\\NET\\CellPhoneB_Store\\CellPhoneB_Store\\CellPhoneB_Store.csproj",
+              "RelativeToolTip": "CellPhoneB_Store\\CellPhoneB_Store.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-18T09:39:33.942Z"
             }
           ]
         },
