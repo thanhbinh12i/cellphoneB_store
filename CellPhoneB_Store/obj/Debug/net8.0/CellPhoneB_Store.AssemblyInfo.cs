@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CellPhoneB_Store")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e1674e16a8181852eb1b18959825c8544262ba93")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8e7160062a54eba586b39660980b3476586689ac")]
 [assembly: System.Reflection.AssemblyProductAttribute("CellPhoneB_Store")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CellPhoneB_Store")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

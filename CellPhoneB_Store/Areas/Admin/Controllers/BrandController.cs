@@ -7,7 +7,8 @@ using Microsoft.EntityFrameworkCore;
 namespace CellPhoneB_Store.Areas.Admin.Controllers
 {
     [Area("Admin")]
-	[Authorize]
+    [Route("Admin/Brand")]
+    [Authorize]
 	public class BrandController : Controller
     {
         private readonly DataContext _dataContext;
@@ -20,10 +21,12 @@ namespace CellPhoneB_Store.Areas.Admin.Controllers
         {
             return View(await _dataContext.Brands.OrderByDescending(p => p.Id).ToListAsync());
         }
+        [Route("Create")]
         public async Task<IActionResult> Create()
         {
             return View();
         }
+        [Route("Create")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(BrandModel brand)
@@ -62,11 +65,13 @@ namespace CellPhoneB_Store.Areas.Admin.Controllers
 
             return View(brand);
         }
+        [Route("Edit")]
         public async Task<IActionResult> Edit(int id)
         {
             BrandModel brand = await _dataContext.Brands.FindAsync(id);
             return View(brand);
         }
+        [Route("Edit")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(BrandModel brand)
@@ -76,12 +81,6 @@ namespace CellPhoneB_Store.Areas.Admin.Controllers
             if (ModelState.IsValid)
             {
                 brand.Slug = brand.Name.Replace(" ", "-");
-                var slug = await _dataContext.Categories.FirstOrDefaultAsync(p => p.Slug == brand.Slug);
-                if (slug != null)
-                {
-                    ModelState.AddModelError("", "Thương hiệu đã tồn tại");
-                    return View(brand);
-                }
 
                 _dataContext.Update(brand);
                 await _dataContext.SaveChangesAsync();

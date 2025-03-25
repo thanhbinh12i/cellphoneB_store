@@ -5,6 +5,8 @@
 <h4>Create Category</h4>
 <form asp-action="Edit" enctype="multipart/form-data">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="Id" />
+
     <div class="form-group">
         <label for="Name" class="form-label">Name</label>
         <input asp-for="Name" class="form-control" id="Name">
