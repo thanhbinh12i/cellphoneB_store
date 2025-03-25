@@ -2,57 +2,86 @@
 @{
     ViewData["title"] = "Edit Product";
 }
-<h4>Edit Product</h4>
-<form asp-action="Edit" enctype="multipart/form-data">
-    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-    <div class="form-group">
-        <label for="Name" class="form-label">Name</label>
-        <input asp-for="Name" class="form-control" id="Name">
-        <span asp-validation-for="Name" class="text-danger" />
-    </div>
-    <div class="form-group">
-        <label for="Price" class="form-label">Price</label>
-        <input asp-for="Price" class="form-control" id="Price">
-        <span asp-validation-for="Price" class="text-danger" />
-    </div>
-    <div class="form-group">
-        <label for="Description" class="form-label">Description</label>
-        <textarea asp-for="Description" class="form-control"></textarea>
-        <span asp-validation-for="Description" class="text-danger" />
-    </div>
-    <div class="form-group">
-        <label for="Category" class="form-label">Category</label>
-        <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.Categories">
-            <option>--Choose a category</option>
-        </select>
-        <span asp-validation-for="CategoryId" class="text-danger" />
-    </div>
-    <div class="form-group">
-        <label for="Brand" class="form-label">Brand</label>
-        <select asp-for="BrandId" class="form-control" asp-items="ViewBag.Brand">
-            <option>--Choose a Brand</option>
-        </select>
-        <span asp-validation-for="BrandId" class="text-danger" />
-    </div>
-    <div class="form-group">
-        <label for="Image" class="form-label">Image</label>
-        <input asp-for="ImageUpload" class="form-control" />
-        <span asp-validation-for="ImageUpload" class="text-danger"></span>
-        <img width="50" src="~/images/product/@Model.Image" />
-    </div>
-    <div class="form-group">
-        <button class="btn btn-primary">Update</button>
-    </div>
-</form>
-<a asp-action="Index">Back to List Product</a>
+<h3>Edit Product</h3>
+
+<div class="col-md-9">
+    <form asp-action="Edit" method="post" enctype="multipart/form-data">
+        <input type="hidden" asp-for="Id" />
+
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label>Name</label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Price</label>
+            <input asp-for="Price" pattern="[0-9.,]+" class="form-control typing-price" />
+            <span id="price-convert"></span>
+
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Description</label>
+            <textarea asp-for="Description" class="form-control"> </textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Category</label>
+            <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.Categories">
+                <option>--Choose a category</option>
+            </select>
+            <span asp-validation-for="CategoryId" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="Brand" class="form-label">Brand</label>
+            <select asp-for="BrandId" class="form-control" asp-items="ViewBag.Brand">
+                <option>--Choose a Brand</option>
+            </select>
+            <span asp-validation-for="BrandId" class="text-danger" />
+        </div>
+        <div class="form-group">
+            <label for="Image" class="form-label">Image</label>
+            <input asp-for="ImageUpload" class="form-control" />
+            <span asp-validation-for="ImageUpload" class="text-danger"></span>
+            <img width="50" src="~/images/product/@Model.Image" />
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Upload</button>
+        </div>
+
+
+    </form>
+
+    <a asp-action="Index">Back to list product</a>
+</div>
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
-    <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
 
+    <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
     <script>
-        CKEDITOR.replace("Description");
+        $("#ImageUpload").change(function () {
+            readURL(this);
+        });
+    </script>
+    <script>
+        CKEDITOR.replace('Description');
+    </script>
+    <script>
+        $(".typing-price").on("keyup", function () {
+            var currency_input = $(this).val();
+
+            $("#price-convert").html(new Intl.NumberFormat('vn-VN', { style: 'currency', currency: 'VND' }).format(
+                currency_input,
+            ));
+        });
     </script>
 }
 

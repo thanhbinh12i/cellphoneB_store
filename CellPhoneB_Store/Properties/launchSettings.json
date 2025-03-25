@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "http": {
+    "CellPhoneB_Store": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
@@ -18,7 +18,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "https": {
+    "https": {  
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

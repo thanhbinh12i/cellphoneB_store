@@ -9,7 +9,8 @@ using Microsoft.EntityFrameworkCore;
 namespace CellPhoneB_Store.Areas.Admin.Controllers
 {
 	[Area("Admin")]
-	[Authorize]
+    [Route("Admin/Category")]
+    [Authorize]
 	public class CategoryController : Controller
 	{
 		private readonly DataContext _dataContext;
@@ -17,14 +18,17 @@ namespace CellPhoneB_Store.Areas.Admin.Controllers
 		{
 			_dataContext = dataContext;
 		}
-		public async Task<IActionResult> Index()
+        [Route("Index")]
+        public async Task<IActionResult> Index()
 		{
 			return View(await _dataContext.Categories.OrderByDescending(p => p.Id).ToListAsync());
 		}
+        [Route("Create")]
         public async Task<IActionResult> Create()
         {
             return View();
         }
+        [Route("Create")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(CategoryModel category)
@@ -63,35 +67,30 @@ namespace CellPhoneB_Store.Areas.Admin.Controllers
 
             return View(category);
         }
+        [Route("Edit")]
         public async Task<IActionResult> Edit(int id)
         {
             CategoryModel category = await _dataContext.Categories.FindAsync(id);
             return View(category);
         }
+        [Route("Edit")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(CategoryModel category)
         {
-
-
             if (ModelState.IsValid)
             {
                 category.Slug = category.Name.Replace(" ", "-");
-                var slug = await _dataContext.Categories.FirstOrDefaultAsync(p => p.Slug == category.Slug);
-                if (slug != null)
-                {
-                    ModelState.AddModelError("", "Sản phẩm đã tồn tại");
-                    return View(category);
-                }
 
                 _dataContext.Update(category);
                 await _dataContext.SaveChangesAsync();
                 TempData["success"] = "Cập nhật danh mục thành công";
                 return RedirectToAction("Index");
+
             }
             else
             {
-                TempData["error"] = "Model error";
+                TempData["error"] = "Model có một vài thứ đang lỗi";
                 List<string> errors = new List<string>();
                 foreach (var value in ModelState.Values)
                 {
@@ -103,7 +102,6 @@ namespace CellPhoneB_Store.Areas.Admin.Controllers
                 string errorMessage = string.Join("\n", errors);
                 return BadRequest(errorMessage);
             }
-
             return View(category);
         }
         public async Task<IActionResult> Delete(int Id)
