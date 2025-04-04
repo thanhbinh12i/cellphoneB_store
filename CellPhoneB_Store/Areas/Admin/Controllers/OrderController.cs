@@ -6,7 +6,8 @@ using Microsoft.EntityFrameworkCore;
 namespace CellPhoneB_Store.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize]
+	[Route("Admin/Order")]
+	[Authorize]
     public class OrderController : Controller
 	{
 		private readonly DataContext _dataContext;
@@ -14,14 +15,47 @@ namespace CellPhoneB_Store.Areas.Admin.Controllers
 		{
 			_dataContext = dataContext;
 		}
+        [HttpGet]
+        [Route("Index")]
 		public async Task<IActionResult> Index()
 		{
 			return View(await _dataContext.Orders.OrderByDescending(p => p.Id).ToListAsync());
 		}
-		public async Task<IActionResult> ViewOrder(string ordercode)
+        [HttpGet]
+        [Route("ViewOrder")]
+        public async Task<IActionResult> ViewOrder(string ordercode)
 		{
-			var DetailsOrder = await _dataContext.OrderDetails.Include(o => o.Product).Where(o => o.OrderCode == ordercode).ToListAsync();
-			return View(DetailsOrder);
-		}
-	}
+            var DetailsOrder = await _dataContext.OrderDetails.Include(od => od.Product)
+                .Where(od => od.OrderCode == ordercode).ToListAsync();
+            return View(DetailsOrder);
+        }
+        [HttpGet]
+        [Route("Delete")]
+        public async Task<IActionResult> Delete(string ordercode)
+        {
+            var order = await _dataContext.Orders.FirstOrDefaultAsync(o => o.OrderCode == ordercode);
+
+            if (order == null)
+            {
+                return NotFound();
+            }
+            try
+            {
+
+                //delete order
+                _dataContext.Orders.Remove(order);
+
+
+                await _dataContext.SaveChangesAsync();
+
+                return RedirectToAction("Index");
+            }
+            catch (Exception)
+            {
+
+                return StatusCode(500, "An error occurred while deleting the order.");
+            }
+        }
+
+    }
 }

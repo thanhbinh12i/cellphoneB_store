@@ -20,7 +20,6 @@ namespace CellPhoneB_Store.Areas.Admin.Controllers
             _roleManager = roleManager;
         }
         [Route("Index")]
-        
         public async Task<IActionResult> Index()
         {
             return View(await _dataContext.Roles.OrderByDescending(p => p.Id).ToListAsync());
@@ -80,8 +79,8 @@ namespace CellPhoneB_Store.Areas.Admin.Controllers
             return Redirect("Index");
         }
         [HttpPost]
-        [Route("Edit")]
         [ValidateAntiForgeryToken]
+        [Route("Edit")]
         public async Task<IActionResult> Edit(string id, IdentityRole model)
         {
             if (string.IsNullOrEmpty(id))

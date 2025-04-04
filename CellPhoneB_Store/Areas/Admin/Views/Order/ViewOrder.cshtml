@@ -1,23 +1,49 @@
 ﻿@model IEnumerable<OrderDetails>
 @{
     ViewData["title"] = "Order Listed";
+    decimal total = 0; // Store total amount
+    decimal subtotal = 0;
 }
 <h3>List Products</h3>
-<table class="table">
+<table class="table" id="detail_order">
     <thead>
         <tr>
-            <th scope="col">Order Code</th>
+            <th>Id</th>
+            <th>Order Code</th>
+            <th>UserName</th>
+            <th>Product Name</th>
+            <th>Product Price</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+
 
         </tr>
     </thead>
     <tbody>
+
         @foreach (var item in Model)
         {
+            subtotal = item.Quantity * item.Price; //số lượng * giá
+            total += subtotal;
             <tr>
-                <td scope="row">@item.OrderCode</td>
+                <input type="hidden" asp-for="@item.OrderCode" class="getId" />
+                <td>@item.Id</td>
+                <td>@item.OrderCode</td>
+                <td>@item.UserName</td>
+                <td>@item.Product.Name</td>
+                <td>@item.Price.ToString("#,##0 VNĐ")</td>
+                <td>@item.Quantity</td>
+                <td>@subtotal.ToString("#,##0 VNĐ")</td>
+
             </tr>
         }
+        <tr>
+            <td>Total:</td>
+            <td></td>
+            <td></td>
+            <td></td>
 
-
+            <td>Tổng : @total.ToString("#,##0 đ")</td>
+        </tr>
     </tbody>
 </table>
