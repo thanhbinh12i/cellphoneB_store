@@ -6,6 +6,8 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<title>Home | E-Shopper</title>
+	<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.17.2/dist/sweetalert2.min.css" rel="stylesheet">
+	<link href="//cdn.datatables.net/2.2.2/css/dataTables.dataTables.min.css" rel="stylesheet">
 	<link href="~/css/bootstrap.min.css" rel="stylesheet">
 	<link href="~/css/font-awesome.min.css" rel="stylesheet">
 	<link href="~/css/prettyPhoto.css" rel="stylesheet">
@@ -22,7 +24,6 @@
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/images/ico/apple-touch-icon-114-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/images/ico/apple-touch-icon-72-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" href="~/images/ico/apple-touch-icon-57-precomposed.png">
-	<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.17.2/dist/sweetalert2.min.css" rel="stylesheet">
 </head><!--/head-->
 
 <body>
@@ -154,6 +155,7 @@
 	<script src="~/js/jquery.scrollUp.min.js"></script>
 	<script src="~/js/price-range.js"></script>
 	<script src="~/js/jquery.prettyPhoto.js"></script>
+	<script src="//cdn.datatables.net/2.2.2/js/dataTables.min.js"></script>
 	<script src="~/js/main.js"></script>
 	<script src="~/Backend/js/site.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.17.2/dist/sweetalert2.all.min.js"></script>
@@ -164,6 +166,10 @@
 				Swal.fire(message);
 
 		});
+	</script>
+	<script>
+		let table = new DataTable('#myTable');
+
 	</script>
 	@await RenderSectionAsync("Scripts",required:false)
 </body>

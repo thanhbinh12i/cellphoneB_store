@@ -1,5 +1,6 @@
 ﻿using CellPhoneB_Store.Respository;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace CellPhoneB_Store.Controllers
 {
@@ -21,7 +22,22 @@ namespace CellPhoneB_Store.Controllers
 				return RedirectToAction("Index");
 			}
 			var productById = _dataContext.Products.Where(p => p.Id == Id).FirstOrDefault();
-			return View(productById);
+
+            var relatedProducts = await _dataContext.Products
+            .Where(p => p.CategoryId == productById.CategoryId && p.Id != productById.Id)
+            .Take(4)
+            .ToListAsync();
+
+            ViewBag.RelatedProducts = relatedProducts;
+
+            return View(productById);
+		}
+		public async Task<IActionResult> Search(string searchTerm)
+		{
+			var products = await _dataContext.Products.Where(p => p.Name.Contains(searchTerm)).ToListAsync();
+			ViewBag.Keyword = searchTerm;
+
+			return View(products);
 		}
 	}
 }
