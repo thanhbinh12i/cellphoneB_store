@@ -1,4 +1,5 @@
-﻿using CellPhoneB_Store.Models;
+﻿using CellPhoneB_Store.Areas.Admin.Repository;
+using CellPhoneB_Store.Models;
 using CellPhoneB_Store.Respository;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
@@ -8,9 +9,11 @@ namespace CellPhoneB_Store.Controllers
 	public class CheckoutController : Controller
 	{
 		private readonly DataContext _dataContext;
-		public CheckoutController(DataContext context)
+		private readonly IEmailSender _emailSender;
+		public CheckoutController(DataContext context, IEmailSender emailSender)
 		{
 			_dataContext = context;
+			_emailSender = emailSender;
 		}
 		public IActionResult Index()
 		{
@@ -46,7 +49,14 @@ namespace CellPhoneB_Store.Controllers
 					_dataContext.SaveChanges();
                 }
 				HttpContext.Session.Remove("Cart");
-                TempData["success"] = "Check out thành công, vui lòng chờ duyệt đơn hàng";
+
+				var receiver = "nptbinh17092004@gmail.com";
+
+                var subject = "Đặt hàng thành công";
+				var message = "Đặt hàng thành công, trải nghiệm dịch vụ nhé.";
+
+				await _emailSender.SendEmailAsync(receiver, subject, message);
+				TempData["success"] = "Check out thành công, vui lòng chờ duyệt đơn hàng";
 				return RedirectToAction("Index","Cart");
 			}
 			return View();

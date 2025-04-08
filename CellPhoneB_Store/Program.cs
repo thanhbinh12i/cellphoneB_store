@@ -1,3 +1,4 @@
+using CellPhoneB_Store.Areas.Admin.Repository;
 using CellPhoneB_Store.Models;
 using CellPhoneB_Store.Respository;
 using Microsoft.AspNetCore.Identity;
@@ -16,7 +17,7 @@ namespace CellPhoneB_Store
             {
                 options.UseSqlServer(builder.Configuration["ConnectionStrings:ConnectedDb"]);
             });
-
+			builder.Services.AddTransient<IEmailSender, EmailSender>();
 			// Add services to the container.
 			builder.Services.AddControllersWithViews();
 
