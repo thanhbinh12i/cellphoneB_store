@@ -25,12 +25,12 @@
                     }
                     else
                     {
-                        <span class="text text-success">Đơn hàng thành công</span>
+                        <span class="text text-success"> Đã xử lý</span>
                     }
 
                 </td>
                 <td>
-                    <a class="btn btn-warning" asp-action="ViewOrder" asp-controller="Order" asp-route-id="@item.OrderCode">View</a>
+                    <a class="btn btn-warning btn-sm" asp-action="ViewOrder" asp-controller="Order" asp-route-ordercode="@item.OrderCode">View Order</a>
                     <a class="btn btn-danger confirmDeletion" asp-action="Delete" asp-controller="Order" asp-route-id="@item.OrderCode">Delete</a>
                 </td>
             </tr>

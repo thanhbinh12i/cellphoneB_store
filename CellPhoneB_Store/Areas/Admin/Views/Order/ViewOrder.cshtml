@@ -23,7 +23,7 @@
 
         @foreach (var item in Model)
         {
-            subtotal = item.Quantity * item.Price; //số lượng * giá
+            subtotal = item.Quantity * item.Price; 
             total += subtotal;
             <tr>
                 <input type="hidden" asp-for="@item.OrderCode" class="getId" />
@@ -34,7 +34,6 @@
                 <td>@item.Price.ToString("#,##0 VNĐ")</td>
                 <td>@item.Quantity</td>
                 <td>@subtotal.ToString("#,##0 VNĐ")</td>
-
             </tr>
         }
         <tr>
@@ -44,6 +43,46 @@
             <td></td>
 
             <td>Tổng : @total.ToString("#,##0 đ")</td>
+
+            <td>
+                <select class="form-control select-update-order">
+                    <option value="1">Đơn hàng mới</option>
+                    <option value="0">Đã xử lý</option>
+                </select>
+            </td>
         </tr>
     </tbody>
 </table>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('.select-update-order').change(function () {
+                var status = $(this).val(); //status = 1
+                var ordercode = $('.getId').val(); //
+                // alert(status);
+                // alert(ordercode);
+
+                $.ajax({
+                    type: "POST",
+                    url: "@Url.Action("UpdateOrder")",
+                    data: { status: status, ordercode: ordercode }, // Send data to the server
+
+                    success: function (result) {
+                        // Handle successful update
+                        if (result.success) {
+
+                            Swal.fire("Cập nhật đơn hàng thành công.");
+                        } else {
+
+                            Swal.fire("Cập nhật đơn hàng thất bại." + result.message);
+
+                        }
+                    }
+
+                });
+            });
+        });
+    </script>
+}
+

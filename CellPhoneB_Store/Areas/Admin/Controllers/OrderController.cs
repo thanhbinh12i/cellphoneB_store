@@ -41,7 +41,6 @@ namespace CellPhoneB_Store.Areas.Admin.Controllers
             }
             try
             {
-
                 //delete order
                 _dataContext.Orders.Remove(order);
 
@@ -54,6 +53,31 @@ namespace CellPhoneB_Store.Areas.Admin.Controllers
             {
 
                 return StatusCode(500, "An error occurred while deleting the order.");
+            }
+        }
+        [HttpPost]
+        [Route("UpdateOrder")]
+        public async Task<IActionResult> UpdateOrder(string ordercode, int status)
+        {
+            var order = await _dataContext.Orders.FirstOrDefaultAsync(o => o.OrderCode == ordercode);
+
+            if (order == null)
+            {
+                return NotFound();
+            }
+
+            order.status = status;
+
+            try
+            {
+                await _dataContext.SaveChangesAsync();
+                return Ok(new { success = true, message = "Order status updated successfully" });
+            }
+            catch (Exception)
+            {
+
+
+                return StatusCode(500, "An error occurred while updating the order status.");
             }
         }
 
