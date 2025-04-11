@@ -20,7 +20,9 @@ namespace CellPhoneB_Store.Controllers
         public IActionResult Index()
         {
             var products = _dataContext.Products.Include("Category").Include("Brand").ToList();
-            return View(products);
+			var sliders = _dataContext.Sliders.Where(s => s.Status == 1).ToList();
+            ViewBag.Sliders = sliders;
+			return View(products);
         }
 
         public IActionResult Privacy()

@@ -1,4 +1,7 @@
 ﻿@model IEnumerable<ProductModel>
+
+@Html.Partial("_SliderPartial")
+
 <div class="col-sm-3">
 	@Html.Partial("_SideBarPartial")
 </div>
@@ -7,14 +10,10 @@
 	<div class="features_items">
 		<!--features_items-->
 		<h2 class="title text-center">Features Items</h2>
-		@{
-			int count = 0;
-		}
 		@foreach (var item in Model)
 		{
 			if (item.Name != null)
 			{
-				count++;
 				<div class="col-sm-4">
 					<div class="product-image-wrapper">
 						
@@ -40,11 +39,6 @@
 						</div>
 					</div>
 				</div>
-
-				@if (count % 3 == 0)
-				{
-					<div class="clearfix"></div>
-				}
 			}
 		}
 		

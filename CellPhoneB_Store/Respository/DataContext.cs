@@ -16,6 +16,7 @@ namespace CellPhoneB_Store.Respository
 		public DbSet<OrderModel> Orders { get; set; }
 		public DbSet<OrderDetails> OrderDetails { get; set; }
 		public DbSet<RatingModel> Ratings { get; set; }
+		public DbSet<SliderModel> Sliders { get; set; }
 
 	}
 }
