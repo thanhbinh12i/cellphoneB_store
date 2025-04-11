@@ -15,8 +15,7 @@
             <th>Product Price</th>
             <th>Quantity</th>
             <th>Subtotal</th>
-
-
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -31,7 +30,7 @@
                 <td>@item.OrderCode</td>
                 <td>@item.UserName</td>
                 <td>@item.Product.Name</td>
-                <td>@item.Price</td>
+                <td>@item.Price.ToString("#,##0 VNĐ")</td>
                 <td>@item.Quantity</td>
                 <td>@subtotal.ToString("#,##0 VNĐ")</td>
             </tr>
@@ -55,6 +54,16 @@
 </table>
 
 @section Scripts {
+    <script>
+        new DataTable('#detail_order', {
+            layout: {
+                topStart: {
+                    buttons: ['pdf', 'print']
+                }
+            }
+        });
+
+    </script>
     <script>
         $(document).ready(function () {
             $('.select-update-order').change(function () {

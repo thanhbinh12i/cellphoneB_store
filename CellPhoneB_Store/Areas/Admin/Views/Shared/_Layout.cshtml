@@ -6,10 +6,15 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<title>Home | E-Shopper</title>
-	<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.17.2/dist/sweetalert2.min.css" rel="stylesheet">
-	<link href="//cdn.datatables.net/2.2.2/css/dataTables.dataTables.min.css" rel="stylesheet">
+
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css" rel="stylesheet">
+	<link href="//cdn.datatables.net/2.1.3/css/dataTables.dataTables.min.css" rel="stylesheet">
+	<link href="https://cdn.datatables.net/buttons/3.1.1/css/buttons.dataTables.css" rel="stylesheet">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css">
+
 	<link href="~/css/bootstrap.min.css" rel="stylesheet">
-	<link href="~/css/font-awesome.min.css" rel="stylesheet">
 	<link href="~/css/prettyPhoto.css" rel="stylesheet">
 	<link href="~/css/price-range.css" rel="stylesheet">
 	<link href="~/css/animate.css" rel="stylesheet">
@@ -157,7 +162,16 @@
 	<script src="~/js/jquery.scrollUp.min.js"></script>
 	<script src="~/js/price-range.js"></script>
 	<script src="~/js/jquery.prettyPhoto.js"></script>
+
 	<script src="//cdn.datatables.net/2.2.2/js/dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/buttons/3.1.1/js/dataTables.buttons.js"></script>
+	<script src="https://cdn.datatables.net/buttons/3.1.1/js/buttons.dataTables.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+	<script src="https://cdn.datatables.net/buttons/3.1.1/js/buttons.html5.min.js"></script>
+	<script src="https://cdn.datatables.net/buttons/3.1.1/js/buttons.print.min.js"></script>
+
 	<script src="~/js/main.js"></script>
 	<script src="~/Backend/js/site.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.17.2/dist/sweetalert2.all.min.js"></script>
@@ -170,7 +184,13 @@
 		});
 	</script>
 	<script>
-		let table = new DataTable('#myTable');
+		let table = new DataTable('#myTable', {
+			layout: {
+				topStart: {
+					buttons: ['copy', 'csv', 'excel', 'pdf', 'print']
+				}
+			}
+		});
 
 	</script>
 	@await RenderSectionAsync("Scripts",required:false)
