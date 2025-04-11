@@ -1,9 +1,12 @@
 ﻿@model IEnumerable<ProductModel>
 
-@Html.Partial("_SliderPartial")
-
+@{
+	ViewData["Title"] = "Web bán hàng ASP.NET8";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<partial name="_SliderPartial" />
 <div class="col-sm-3">
-	@Html.Partial("_SideBarPartial")
+	<partial name="_SidebarPartial" />
 </div>
 
 <div class="col-sm-9 padding-right">
@@ -41,9 +44,6 @@
 				</div>
 			}
 		}
-		
-	
-
 	</div><!--features_items-->
 
 </div>

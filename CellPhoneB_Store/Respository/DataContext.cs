@@ -18,5 +18,7 @@ namespace CellPhoneB_Store.Respository
 		public DbSet<RatingModel> Ratings { get; set; }
 		public DbSet<SliderModel> Sliders { get; set; }
 
-	}
+        public DbSet<ContactModel> Contact { get; set; }
+
+    }
 }

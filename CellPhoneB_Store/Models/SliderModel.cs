@@ -6,6 +6,7 @@ namespace CellPhoneB_Store.Models
 {
 	public class SliderModel
 	{
+		[Key]
 		public int Id	{ get; set; }
 		[Required(ErrorMessage = "Yêu cầu nhập tên slider")]
 		public string Name { get; set; }
