@@ -8,7 +8,9 @@
     <thead>
         <tr>
             <th scope="col">Id</th>
-            <th scope="col">ProductName</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Sold out</th>
             <th scope="col">Product Description</th>
             <th scope="col">Product Image</th>
             <th scope="col">Product Slug</th>
@@ -25,7 +27,20 @@
             <tr>
                 <td scope="row">@item.Id</td>
                 <td>@item.Name</td>
-                    <td>@Html.Raw(@item.Description)</td>
+                <td>
+                    @if (@item.Quantity == 0)
+                    {
+                        <span class="text text-danger"><b> @item.Quantity</b></span>
+                    }
+                    else
+                    {
+                        <span class="text text-primary"> @item.Quantity</span>
+                    }
+                    <br />
+                    <a asp-action="AddQuantity" asp-controller="Product" asp-route-Id="@item.Id">Add Quantity</a>
+                </td>
+                <td>@item.Sold</td>
+                <td>@Html.Raw(@item.Description)</td>
                 <td>
                     <img width="50" src="~/images/product/@item.Image"/>
                 </td>

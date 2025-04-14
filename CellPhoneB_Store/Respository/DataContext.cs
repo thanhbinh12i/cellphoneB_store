@@ -21,6 +21,7 @@ namespace CellPhoneB_Store.Respository
         public DbSet<ContactModel> Contact { get; set; }
 		public DbSet<CompareModel> Compares { get; set; }
 		public DbSet<WishlistModel> Wishlist { get; set; }
+        public DbSet<ProductQuantityModel> ProductQuantity { get; set; }
 
-	}
+    }
 }

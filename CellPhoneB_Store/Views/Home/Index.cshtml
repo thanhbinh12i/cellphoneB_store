@@ -30,7 +30,14 @@
 									<p>Danh mục : @item.Category.Name</p>
 									<p>Thương hiệu : @item.Brand.Name</p>
 									</a>
-								<button class="btn btn-default add-to-cart" data-product_id="@item.Id"><i class="fa fa-shopping-cart"></i>Thêm giỏ hàng</button>
+								@if(item.Quantity > 0)
+								{
+									<button class="btn btn-default add-to-cart" data-product_id="@item.Id"><i class="fa fa-shopping-cart"></i>Thêm giỏ hàng</button>
+								}
+								else
+								{
+									<button class="btn btn-danger">Hết hàng</button>
+								}
 							</div>
 							</div>
 			

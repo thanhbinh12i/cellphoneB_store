@@ -1,4 +1,5 @@
-﻿using CellPhoneB_Store.Models;
+﻿using CellPhoneB_Store.Migrations;
+using CellPhoneB_Store.Models;
 using CellPhoneB_Store.Respository;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
@@ -175,6 +176,38 @@ namespace CellPhoneB_Store.Areas.Admin.Controllers
             await _dataContext.SaveChangesAsync();
             TempData["success"] = "sản phẩm đã được xóa thành công";
             return RedirectToAction("Index");
+        }
+        [Route("AddQuantity")]
+		[HttpGet]
+        public async Task<IActionResult> AddQuantity(long Id)
+        {
+			var productByQuantity = await _dataContext.ProductQuantity.Where(p => p.ProductId == Id).ToListAsync();
+            ViewBag.ProductByQuantity = productByQuantity;
+            ViewBag.ProductId = Id;
+            return View();
+        }
+        [Route("UpdateMoreQuantity")]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult UpdateMoreQuantity(ProductQuantityModel productQuantityModel)
+        {
+            var product = _dataContext.Products.Find(productQuantityModel.ProductId);
+
+            if (product == null)
+            {
+                return NotFound();
+            }
+            product.Quantity += productQuantityModel.Quantity;
+
+            productQuantityModel.Quantity = productQuantityModel.Quantity;
+            productQuantityModel.ProductId = productQuantityModel.ProductId;
+            productQuantityModel.DateCreated = DateTime.Now;
+
+
+            _dataContext.Add(productQuantityModel);
+            _dataContext.SaveChangesAsync();
+            TempData["success"] = "Thêm số lượng sản phẩm thành công";
+            return RedirectToAction("AddQuantity", "Product", new { Id = productQuantityModel.ProductId });
         }
     }
 }

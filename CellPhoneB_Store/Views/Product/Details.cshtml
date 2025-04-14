@@ -54,12 +54,22 @@
 					<img src="~/images/product-details/rating.png" alt="" />
 					<span>
 						<span>@Model.ProductDetails.Price.ToString("#,##0 VNĐ")</span>
-						<label>Quantity: 1</label>
+						<label>Quantity: @Model.ProductDetails.Quantity</label>
 						<input type="text" value="3" />
-						<button type="button" class="btn btn-fefault cart">
-							<i class="fa fa-shopping-cart"></i>
-							Add to cart
-						</button>
+						@if(Model.ProductDetails.Quantity > 0)
+						{
+							<button type="button" class="btn btn-default cart">
+								<i class="fa fa-shopping-cart"></i>
+								Thêm vào giỏ hàng
+							</button>
+						}
+						else
+						{
+							<button type="button" class="btn btn-danger">
+								Hết hàng
+							</button>
+						}
+
 					</span>
 					<p><b>Availability:</b> In Stock</p>
 					<p><b>Condition:</b> New</p>

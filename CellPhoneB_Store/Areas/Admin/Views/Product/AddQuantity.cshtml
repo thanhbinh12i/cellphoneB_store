@@ -1,0 +1,54 @@
+﻿@model ProductQuantityModel
+@{
+    ViewData["title"] = "Create Product Quantity";
+    decimal total_quantities = 0;
+    decimal key = 1;
+}
+
+
+<h3>Create Product Quantity</h3>
+
+<form asp-action="UpdateMoreQuantity" asp-controller="Product" enctype="multipart/form-data">
+
+    <input type="hidden" name="ProductId" value="@ViewBag.ProductId" />
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label>Add more Quantity</label>
+        <input min="1" value="1" asp-for="Quantity" class="form-control" />
+        <span asp-validation-for="Quantity" class="text-danger"></span>
+    </div>
+
+
+    <div class="form-group">
+        <button class="btn btn-primary">Create Quantity</button>
+    </div>
+
+
+</form>
+<h3>Existing Product Quantities:</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Key</th>
+            <th>Quantity added</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var productQuantity in ViewBag.ProductByQuantity)
+        {
+            total_quantities += productQuantity.Quantity;
+            <tr>
+                <td>@key</td>
+                <td>@productQuantity.Quantity</td>
+
+                <td>@productQuantity.DateCreated</td>
+            </tr>
+            key++;
+        }
+        <tr>
+            <td>Total Quantities : @total_quantities</td>
+        </tr>
+    </tbody>
+</table>
+<a asp-action="Index" asp-controller="Product">Back to list product</a>
