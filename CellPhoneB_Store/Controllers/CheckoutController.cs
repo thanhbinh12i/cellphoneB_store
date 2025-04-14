@@ -2,6 +2,7 @@
 using CellPhoneB_Store.Models;
 using CellPhoneB_Store.Respository;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 
 namespace CellPhoneB_Store.Controllers
@@ -45,6 +46,11 @@ namespace CellPhoneB_Store.Controllers
 					orderdetails.ProductId = item.ProductId;
 					orderdetails.Price = item.Price;
 					orderdetails.Quantity = item.Quantity;
+
+					var product = await _dataContext.Products.Where(p => p.Id == item.ProductId).FirstOrDefaultAsync();
+					product.Quantity -= item.Quantity;
+					product.Sold += item.Quantity;
+					_dataContext.Update(product);
 					_dataContext.Add(orderdetails);
 					_dataContext.SaveChanges();
                 }

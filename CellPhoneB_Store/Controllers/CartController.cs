@@ -2,6 +2,7 @@
 using CellPhoneB_Store.Models.ViewModel;
 using CellPhoneB_Store.Respository;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace CellPhoneB_Store.Controllers
 {
@@ -69,18 +70,22 @@ namespace CellPhoneB_Store.Controllers
 		}
 		public async Task<IActionResult> Increase(long id)
 		{
-			List<CartItemModel> cart = HttpContext.Session.GetJson<List<CartItemModel>>("Cart");
+            ProductModel product = await _dataContext.Products.Where(p => p.Id == id).FirstOrDefaultAsync();
+
+            List<CartItemModel> cart = HttpContext.Session.GetJson<List<CartItemModel>>("Cart");
 			CartItemModel cartItem = cart.Where(c => c.ProductId == id).FirstOrDefault();
 
-			if (cartItem.Quantity >= 1)
+			if (cartItem.Quantity >= 1 && product.Quantity > cartItem.Quantity)
 			{
 				++cartItem.Quantity;
-			}
-			else
-			{
-				cart.RemoveAll(p => p.ProductId == id);
-			}
-			if (cart.Count == 0)
+                TempData["success"] = "Increase Product to cart Sucessfully! ";
+            }
+            else
+            {
+                cartItem.Quantity = product.Quantity;
+                TempData["success"] = "Maximum Product Quantity to cart Sucessfully! ";
+            }
+            if (cart.Count == 0)
 			{
 				HttpContext.Session.Remove("Cart");
 			}
