@@ -1,4 +1,4 @@
-using CellPhoneB_Store.Models;
+﻿using CellPhoneB_Store.Models;
 using CellPhoneB_Store.Respository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -28,7 +28,16 @@ namespace CellPhoneB_Store.Controllers
             ViewBag.Sliders = sliders;
 			return View(products);
         }
-		[HttpPost]
+        public async Task<IActionResult> Wishlist()
+        {
+            var wishlist_product = await (from w in _dataContext.Wishlist
+                                          join p in _dataContext.Products on w.ProductId equals p.Id
+                                          select new { Product = p, Wishlists = w })
+                               .ToListAsync();
+
+            return View(wishlist_product);
+        }
+        [HttpPost]
 		public async Task<IActionResult> AddWishList(long Id, WishlistModel wishlist)
         {
             var user = await _userManager.GetUserAsync(User);
@@ -49,7 +58,27 @@ namespace CellPhoneB_Store.Controllers
 				return StatusCode(500, "An error occurred while adding to wishlist table.");
 			}
 		}
-		[HttpPost]
+        public async Task<IActionResult> DeleteWishlist(int Id)
+        {
+            WishlistModel wishlist = await _dataContext.Wishlist.FindAsync(Id);
+
+            _dataContext.Wishlist.Remove(wishlist);
+
+            await _dataContext.SaveChangesAsync();
+            TempData["success"] = "SP Yêu thích đã được xóa thành công";
+            return RedirectToAction("Wishlist", "Home");
+        }
+        public async Task<IActionResult> Compare()
+        {
+            var compare_product = await (from c in _dataContext.Compares
+                                         join p in _dataContext.Products on c.ProductId equals p.Id
+                                         join u in _dataContext.Users on c.UserId equals u.Id
+                                         select new { User = u, Product = p, Compares = c })
+                               .ToListAsync();
+
+            return View(compare_product);
+        }
+        [HttpPost]
 		public async Task<IActionResult> AddCompare(long Id)
 		{
 			var user = await _userManager.GetUserAsync(User);
@@ -72,7 +101,17 @@ namespace CellPhoneB_Store.Controllers
 			}
 
 		}
-		public IActionResult Privacy()
+        public async Task<IActionResult> DeleteCompare(int Id)
+        {
+            CompareModel compare = await _dataContext.Compares.FindAsync(Id);
+
+            _dataContext.Compares.Remove(compare);
+
+            await _dataContext.SaveChangesAsync();
+            TempData["success"] = "SP So sánh đã được xóa thành công";
+            return RedirectToAction("Compare", "Home");
+        }
+        public IActionResult Privacy()
         {
             return View();
         }

@@ -17,14 +17,14 @@
 		{
 			if (item.Name != null)
 			{
-				<div class="col-sm-4">
+				<div class="col-sm-4 border-2" style="height: 500px">
 					<div class="product-image-wrapper">
 						
 							<div class="single-products">
 			
 								<div class="productinfo text-center">
 									<a asp-action="Details" asp-controller="Product" asp-route-Id="@item.Id">
-									<img src="~/images/product/@item.Image" alt="" />
+									<img src="~/images/product/@item.Image" alt="" style="height: 200px" />
 									<h2>@item.Price.ToString("#,##0 VNĐ")</h2>
 									<p>@item.Name</p>
 									<p>Danh mục : @item.Category.Name</p>
@@ -39,7 +39,7 @@
 							{
 								<ul class="nav nav-pills nav-justified">
 									<li><button class="btn btn-danger add-btn-wishlist" data-product_id="@item.Id">Yêu thích</button></li>
-									<li><button class="btn btn-primary add-btn-compare" data-product_id="@item.Id">So sánh</button></li>
+									<li><button class="btn btn-success add-btn-compare" data-product_id="@item.Id">So sánh</button></li>
 								</ul>
 							}
 						</div>
