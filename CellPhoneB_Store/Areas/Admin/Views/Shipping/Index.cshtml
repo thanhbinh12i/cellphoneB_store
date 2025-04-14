@@ -19,26 +19,25 @@
     }
 </style>
 <h3>Create Shipping</h3>
-
 <form asp-action="Create" enctype="multipart/form-data">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     <div class="form-group">
         <label>Tỉnh thành phố</label>
-        <select class="css_select" id="tinh" name="tinh" class="form-control" title="Chọn Tỉnh Thành">
+        <select class="css_select form-control" id="tinh" name="tinh" title="Chọn Tỉnh Thành">
             <option value="0">Tỉnh Thành</option>
         </select>
     </div>
 
     <div class="form-group">
         <label>Quận huyện</label>
-        <select class="css_select" id="quan" name="quan" class="form-control" title="Chọn Quận Huyện">
+        <select class="css_select form-control" id="quan" name="quan" title="Chọn Quận Huyện">
             <option value="0">Quận Huyện</option>
         </select>
     </div>
 
     <div class="form-group">
         <label>Phường Xã</label>
-        <select class="css_select" id="phuong" name="phuong" class="form-control" title="Chọn Phường Xã">
+        <select class="css_select form-control" id="phuong" name="phuong" title="Chọn Phường Xã">
             <option value="0">Phường Xã</option>
         </select>
     </div>
@@ -53,11 +52,70 @@
         <button type="button" class="btn btn-primary btn-add-shipping">Create</button>
     </div>
 </form>
+<h2>Shipping List</h2>
+
+<table class="table table-striped" id="myTable">
+    <thead>
+        <tr>
+            <th>City</th>
+            <th>District</th>
+            <th>Ward</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var shipping in ViewBag.Shippings)
+        {
+            <tr>
+                <td>@shipping.City</td>
+                <td>@shipping.District</td>
+                <td>@shipping.Ward</td>
+                <td>@shipping.Price.ToString("#,##0 VNĐ")</td>
+                <td>
+
+                    <a href="@Url.Action("Delete", "Shipping", new { id = shipping.Id })" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
     <script>
+        $(".btn-add-shipping").click(function () {
+            var tinh = $("#tinh").find('option:selected').text();
+            var quan = $("#quan").find('option:selected').text();
+            var phuong = $("#phuong").find('option:selected').text();
+            var price = $("#price-shipping").val();
+            if (tinh == '' || quan == '' || phuong == '' || price == '') {
+                Swal.fire("Làm ơn ko bỏ trống.");
+            } else {
+                $.ajax({
+                    type: "POST",
+                    url: "@Url.Action("StoreShipping", "Shipping")",
+                    data: { city: tinh, district: quan, ward: phuong, price: price }, // Send data to the server
+
+                    success: function (result) {
+                        // Handle successful update
+                        if (result.success) {
+
+                            Swal.fire("Thêm vận chuyển thành công. Load lại page để thấy data.");
+
+                        } else if (result.duplicate) {
+
+                            Swal.fire("Dữ liệu trùng lặp.");
+
+                        }
+                    }
+
+                });
+            }
+
+
+        })
         $(document).ready(function () {
             //Lấy tỉnh thành
             $.getJSON('https://esgoo.net/api-tinhthanh/1/0.htm', function (data_tinh) {
