@@ -19,6 +19,8 @@ namespace CellPhoneB_Store.Respository
 		public DbSet<SliderModel> Sliders { get; set; }
 
         public DbSet<ContactModel> Contact { get; set; }
+		public DbSet<CompareModel> Compares { get; set; }
+		public DbSet<WishlistModel> Wishlist { get; set; }
 
-    }
+	}
 }
