@@ -27,6 +27,8 @@ namespace CellPhoneB_Store.Areas.Admin.Controllers
 		{
             var DetailsOrder = await _dataContext.OrderDetails.Include(od => od.Product)
                 .Where(od => od.OrderCode == ordercode).ToListAsync();
+            var Order = _dataContext.Orders.Where(o => o.OrderCode == ordercode).First();
+            ViewBag.ShippingCost = Order.ShippingCost;
             return View(DetailsOrder);
         }
         [HttpGet]

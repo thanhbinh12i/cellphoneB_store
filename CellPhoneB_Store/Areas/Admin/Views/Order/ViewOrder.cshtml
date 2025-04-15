@@ -15,7 +15,6 @@
             <th>Product Price</th>
             <th>Quantity</th>
             <th>Subtotal</th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -42,7 +41,7 @@
             <td></td>
 
             <td>Tổng : @total.ToString("#,##0 đ")</td>
-
+            <td>Shipping : @ViewBag.ShippingCost.ToString("#,##0 đ")</td>
             <td>
                 <select class="form-control select-update-order">
                     <option value="1">Đơn hàng mới</option>

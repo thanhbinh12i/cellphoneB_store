@@ -3,6 +3,7 @@ using CellPhoneB_Store.Models;
 using CellPhoneB_Store.Respository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using System.Security.Claims;
 
 namespace CellPhoneB_Store.Controllers
@@ -31,11 +32,20 @@ namespace CellPhoneB_Store.Controllers
 			{
 				var orderCode = Guid.NewGuid().ToString();
 				var orderItem = new OrderModel();
-				orderItem.OrderCode = orderCode;
+                var shippingPriceCookie = Request.Cookies["ShippingPrice"];
+                decimal shippingPrice = 0;
+                if (shippingPriceCookie != null)
+                {
+                    var shippingPriceJson = shippingPriceCookie;
+                    shippingPrice = JsonConvert.DeserializeObject<decimal>(shippingPriceJson);
+                }
+                orderItem.OrderCode = orderCode;
 				orderItem.UserName = userEmail;
 				orderItem.status = 1;
 				orderItem.CreateDate = DateTime.Now;
-				_dataContext.Add(orderItem);
+				orderItem.ShippingCost = shippingPrice;
+
+                _dataContext.Add(orderItem);
 				_dataContext.SaveChanges();
 				List<CartItemModel> cartItems = HttpContext.Session.GetJson<List<CartItemModel>>("Cart") ?? new List<CartItemModel>();
                 foreach (var item in cartItems)

@@ -3,6 +3,7 @@ using CellPhoneB_Store.Models.ViewModel;
 using CellPhoneB_Store.Respository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 
 namespace CellPhoneB_Store.Controllers
 {
@@ -17,10 +18,18 @@ namespace CellPhoneB_Store.Controllers
 		{
 			List<CartItemModel> cartItems = HttpContext.Session.GetJson<List<CartItemModel>>("Cart")
 				?? new List<CartItemModel>();
+			var shippingPriceCookie = Request.Cookies["ShippingPrice"];
+			decimal shippingPrice = 0;
+			if(shippingPriceCookie != null)
+			{
+				var shippingPriceJson = shippingPriceCookie;
+				shippingPrice = JsonConvert.DeserializeObject<decimal>(shippingPriceJson);
+			}
 			CartItemViewModel cartVM = new()
 			{
 				CartItems = cartItems,
-				GrandTotal = cartItems.Sum(x => x.Quantity * x.Price)
+				GrandTotal = cartItems.Sum(x => x.Quantity * x.Price),
+				ShippingPrice = shippingPrice
 			};
 			return View(cartVM);
 		}
@@ -117,5 +126,50 @@ namespace CellPhoneB_Store.Controllers
             TempData["success"] = "Clear cart Successfully";
             return RedirectToAction("Index");
 		}
-	}
+        [HttpPost]
+        [Route("Cart/GetShipping")]
+        public async Task<IActionResult> GetShipping(ShippingModel shippingModel, string quan, string tinh, string phuong)
+        {
+
+            var existingShipping = await _dataContext.Shippings
+                .FirstOrDefaultAsync(x => x.City == tinh && x.District == quan && x.Ward == phuong);
+
+            decimal shippingPrice = 0; // Set mặc định giá tiền
+
+            if (existingShipping != null)
+            {
+                shippingPrice = existingShipping.Price;
+            }
+            else
+            {
+                //Set mặc định giá tiền nếu ko tìm thấy
+                shippingPrice = 50000;
+            }
+            var shippingPriceJson = JsonConvert.SerializeObject(shippingPrice);
+            try
+            {
+                var cookieOptions = new CookieOptions
+                {
+                    HttpOnly = true,
+                    Expires = DateTimeOffset.UtcNow.AddMinutes(30),
+                    Secure = true // using HTTPS
+                };
+
+                Response.Cookies.Append("ShippingPrice", shippingPriceJson, cookieOptions);
+            }
+            catch (Exception ex)
+            {
+                //
+                Console.WriteLine($"Error adding shipping price cookie: {ex.Message}");
+            }
+            return Json(new { shippingPrice });
+        }
+        [HttpPost]
+        [Route("Cart/RemoveShippingCookie")]
+        public IActionResult RemoveShippingCookie()
+        {
+            Response.Cookies.Delete("ShippingPrice");
+            return Json(new { success = true });
+        }
+    }
 }
