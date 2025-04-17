@@ -29,6 +29,7 @@ namespace CellPhoneB_Store.Areas.Admin.Controllers
                 .Where(od => od.OrderCode == ordercode).ToListAsync();
             var Order = _dataContext.Orders.Where(o => o.OrderCode == ordercode).First();
             ViewBag.ShippingCost = Order.ShippingCost;
+            ViewBag.Status = Order.status;
             return View(DetailsOrder);
         }
         [HttpGet]
