@@ -14,7 +14,7 @@ namespace CellPhoneB_Store.Controllers
 		{
 			_dataContext = context;	
 		}
-		public IActionResult Index()
+		public async Task<IActionResult> Index()
 		{
 			List<CartItemModel> cartItems = HttpContext.Session.GetJson<List<CartItemModel>>("Cart")
 				?? new List<CartItemModel>();
@@ -25,12 +25,26 @@ namespace CellPhoneB_Store.Controllers
 				var shippingPriceJson = shippingPriceCookie;
 				shippingPrice = JsonConvert.DeserializeObject<decimal>(shippingPriceJson);
 			}
-			CartItemViewModel cartVM = new()
+            var CouponName = Request.Cookies["CouponName"];
+            var couponTitle = Request.Cookies["CouponTitle"];
+            var coupon = await _dataContext.Coupons
+                .FirstOrDefaultAsync(x => x.Name == CouponName);
+            int percent = coupon?.PercentSale ?? 0;
+            decimal GrandTotal = 0;
+            if(percent > 0)
+            {
+                GrandTotal = cartItems.Sum(x => x.Quantity * x.Price) * (100 - percent) / 100;
+            }else
+            {
+                GrandTotal = cartItems.Sum(x => x.Quantity * x.Price);
+            }
+            CartItemViewModel cartVM = new()
 			{
 				CartItems = cartItems,
-				GrandTotal = cartItems.Sum(x => x.Quantity * x.Price),
-				ShippingPrice = shippingPrice
-			};
+				GrandTotal = GrandTotal,
+				ShippingPrice = shippingPrice,
+                CouponCode = couponTitle,
+            };
 			return View(cartVM);
 		}
 		public async Task<IActionResult> Add(long id)
@@ -170,6 +184,59 @@ namespace CellPhoneB_Store.Controllers
         {
             Response.Cookies.Delete("ShippingPrice");
             return Json(new { success = true });
+        }
+        [HttpPost]
+        [Route("Cart/GetCoupon")]
+        public async Task<IActionResult> GetCoupon(CouponModel couponModel, string coupon_value)
+        {
+            var validCoupon = await _dataContext.Coupons
+                .FirstOrDefaultAsync(x => x.Name == coupon_value && x.Quantity >= 1);
+
+            string couponName = validCoupon.Name;
+            string couponTitle = validCoupon.Name + " | " + validCoupon?.Description;
+
+            if (couponTitle != null)
+            {
+                TimeSpan remainingTime = validCoupon.DateExpired - DateTime.Now;
+                int daysRemaining = remainingTime.Days;
+
+                if (daysRemaining >= 0)
+                {
+                    try
+                    {
+                        var cookieOptions = new CookieOptions
+                        {
+                            HttpOnly = true,
+                            Expires = DateTimeOffset.UtcNow.AddMinutes(30),
+                            Secure = true,
+                            SameSite = SameSiteMode.Strict // Kiểm tra tính tương thích trình duyệt
+                        };
+
+                        Response.Cookies.Append("CouponName", couponName, cookieOptions);
+                        Response.Cookies.Append("CouponTitle", couponTitle, cookieOptions);
+
+                        return Ok(new { success = true, message = "Coupon applied successfully" });
+                    }
+                    catch (Exception ex)
+                    {
+                        //trả về lỗi 
+                        Console.WriteLine($"Error adding apply coupon cookie: {ex.Message}");
+                        return Ok(new { success = false, message = "Coupon applied failed" });
+                    }
+                }
+                else
+                {
+
+                    return Ok(new { success = false, message = "Coupon has expired" });
+                }
+
+            }
+            else
+            {
+                return Ok(new { success = false, message = "Coupon not existed" });
+            }
+
+            return Json(new { CouponTitle = couponTitle });
         }
     }
 }

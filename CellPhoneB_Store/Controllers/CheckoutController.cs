@@ -44,6 +44,8 @@ namespace CellPhoneB_Store.Controllers
 				orderItem.status = 1;
 				orderItem.CreateDate = DateTime.Now;
 				orderItem.ShippingCost = shippingPrice;
+                var CouponCode = Request.Cookies["CouponTitle"];
+                orderItem.CouponCode = CouponCode;
 
                 _dataContext.Add(orderItem);
 				_dataContext.SaveChanges();
